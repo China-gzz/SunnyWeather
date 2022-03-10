@@ -1,6 +1,7 @@
 package com.sunnyweather.android.ui.place
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -59,6 +60,7 @@ class PlaceFragment : Fragment() {
                 adapter.notifyDataSetChanged()
             } else {
                 Toast.makeText(activity, "未能查询到任何地点",Toast.LENGTH_SHORT).show()
+                Log.e("gzz", "未能查询到任何地点");
                 result.exceptionOrNull()?.printStackTrace()
             }
         })
